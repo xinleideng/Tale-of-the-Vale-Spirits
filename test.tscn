@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://cjyb0f0wti2yo"]
+
+[ext_resource type="Texture2D" uid="uid://dryow4gvckx8x" path="res://edited-photo.png" id="1_8uh7m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppyta"]
+atlas = ExtResource("1_8uh7m")
+region = Rect2(0, 0, 228, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykrsh"]
+atlas = ExtResource("1_8uh7m")
+region = Rect2(228, 0, 228, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g14j6"]
+atlas = ExtResource("1_8uh7m")
+region = Rect2(484, 0, 242, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbegm"]
+atlas = ExtResource("1_8uh7m")
+region = Rect2(726, 0, 242, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ehkex"]
+animations = [{
+"frames": [{
+"duration": 3.01,
+"texture": SubResource("AtlasTexture_ppyta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykrsh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g14j6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbegm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-276, 272)
+scale = Vector2(0.8246159, 0.79418945)
+sprite_frames = SubResource("SpriteFrames_ehkex")
+autoplay = "default"
+frame_progress = 0.6769641
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(3.0000153, 7)
+zoom = Vector2(0.3, 0.3)
+limit_enabled = false
